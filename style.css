@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    font-family: "Ubuntu", sans-serif !important;
+    margin:0;
+    padding:0;
+}
+
+.df{
+    align-items: center;
+}
+
+.containe{
+    background-color: #EEF5FF;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.aba{
+    width: 950px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.banner{
+    display:flex;   
+    position: relative;
+}
+
+.barraNavega{
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    justify-content: space-between;
+    color:#fff;
+    position: absolute;
+    top: 50px; /* Posição relativa ao elemento pai */
+    left: 50px; /* Posição relativa ao elemento pai */
+}
+
+.step-ball{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px !important;
+    height: 30px;
+    border-radius: 50px;border: 1px solid;
+    border-color: #BDE1FF;
+    color:#BDE1FF;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.able{
+    border: none;
+    color: #0E2F5B;
+    background-color: #BDE1FF;
+    cursor: default;
+}
+
+.hide{
+    display: none;
+}
+
+.step-text{
+    width: auto !important;
+}
+
+.step{
+    color:#c4c4c4;
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+.page{
+    font-weight: bold;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2{
+    font-weight: bold !important;
+    color: hsl(213, 96%, 18%);
+}
+
+p{
+    color: hsl(240, 3%, 60%);
+}
+
+label{
+    color: hsl(213, 96%, 18%);
+    padding: 0;
+}
+input{
+    height: 40px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: hsl(229, 24%, 87%);
+    border-style:solid;
+    
+}
+input::placeholder{
+    color: hsl(240, 3%, 60%)
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+#next{
+    background-color: hsl(213, 96%, 18%);
+}
+#back{
+    color: #c4c4c4;
+    background-color: #fff;
+}
+
+.hide{
+    display: none;
+}
+
+.botao{
+    font-size: 0.8rem;
+    color:#fff;
+    height: 40px;
+    width: 100px;
+    border-style: none;
+    border-radius: 8px;
+}
