@@ -13,11 +13,13 @@ var summary = document.querySelector("#summary")
 var summaryBall = document.getElementById('summaryBall');
 
 
-let indice = 1
+
+
+let indice = 1;
 
 bolas.forEach((bola) => {
-bola.textContent = indice
-indice ++
+bola.textContent = indice;
+indice ++;
 
     bola.addEventListener('click', function() {
         bolas.forEach((bola) => {bola.classList.remove('able')});
