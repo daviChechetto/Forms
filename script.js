@@ -1,51 +1,119 @@
-var bolas = document.querySelectorAll(".step-ball")
+const bolas = document.querySelectorAll(".step-ball")
 
-var info = document.querySelector("#info")
-var infoBall = document.getElementById('infoBall');
+const info = document.querySelector("#info")
+const infoBall = document.getElementById('infoBall');
 
-var plans = document.querySelector("#plans")
-var plansBall = document.getElementById('plansBall');
+const plans = document.querySelector("#plans")
+const plansBall = document.getElementById('plansBall');
 
-var add = document.querySelector("#add")
-var addBall = document.getElementById('addBall');
+const add = document.querySelector("#add")
+const addBall = document.getElementById('addBall');
 
-var summary = document.querySelector("#summary")
-var summaryBall = document.getElementById('summaryBall');
+const summary = document.querySelector("#summary")
+const summaryBall = document.getElementById('summaryBall');
+
+const next = document.getElementById("next")
+const back = document.getElementById("back")
+
+var numero = 1;
+var indice = 1;
 
 
 
 
-let indice = 1;
+    next.addEventListener('click', (e) => {
+        
+        info.classList.add("hide");
+        plans.classList.add("hide");
+        add.classList.add("hide");
+        summary.classList.add('hide');
+        
+        e.preventDefault();
+        
+        console.log(numero)
+        numero ++
+
+        if (numero == 1){
+            info.classList.remove("hide");
+        }
+        else if (numero == 2){
+            plans.classList.remove("hide");
+        }   
+        else if (numero == 3){
+            add.classList.remove("hide");
+        }
+        else if (numero == 4){
+            summary.classList.remove("hide");
+            next.classList.add('hide');
+        }
+        else{
+            next.classList.remove('hide')
+        }
+    } )
+
+    back.addEventListener('click', (e) => {
+        
+        info.classList.add("hide");
+        plans.classList.add("hide");
+        add.classList.add("hide");
+        summary.classList.add('hide');
+        
+        e.preventDefault();
+        
+        console.log(numero)
+        numero --
+
+        if (numero == 1){
+            info.classList.remove("hide");
+            back.classList.add("hide")
+        }
+        else if (numero == 2){
+            plans.classList.remove("hide");
+        }   
+        else if (numero == 3){
+            add.classList.remove("hide");
+            next.classList.remove("hide")
+        }
+        else if (numero == 4){
+            summary.classList.remove("hide");
+        }
+        else{
+            next.classList.remove('hide')
+        }
+
+    } )
+
 
 bolas.forEach((bola) => {
-bola.textContent = indice;
-indice ++;
+
+    
+    bola.value = indice;
+    indice ++;
+
+    bola.textContent = bola.value;
+
+
+    
 
     bola.addEventListener('click', function() {
+
+        info.classList.add("hide");
+        plans.classList.add("hide");
+        add.classList.add("hide");
+        summary.classList.add('hide');
+
         bolas.forEach((bola) => {bola.classList.remove('able')});
         this.classList.add('able');
-        if (bola == infoBall){
+        if (bola.value == 1){
             info.classList.remove("hide");
-            plans.classList.add("hide");
-            add.classList.add("hide");
-            summary.classList.add('hide');
         }
-        else if (bola == plansBall){
-            info.classList.add("hide");
+        else if (bola.value == 2){
             plans.classList.remove("hide");
-            add.classList.add("hide");
-            summary.classList.add('hide');
         }   
-        else if (bola == addBall){
-            info.classList.add("hide");
-            plans.classList.add("hide");
+        else if (bola.value == 3){
             add.classList.remove("hide");
-            summary.classList.add('hide');
         }
-        else if (bola == summaryBall){
-            info.classList.add("hide");
-            plans.classList.add("hide");
-            add.classList.add("hide");
+        else if (bola.value == 4){
             summary.classList.remove('hide');
         }
     })
