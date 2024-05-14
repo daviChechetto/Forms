@@ -117,15 +117,77 @@ input::placeholder{
 }
 
 .option{
-    border:solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 142px !important;
+    height: 200px;
+    margin-inline: 8px;
+    padding: 15px;
+    border:solid 1px;
     border-radius: 8px;
-    border-color: hsl(354, 84%, 57%);
+    background-color: #fff;
+    border-color: hsl(206, 94%, 87%)
+}
+
+button.option:hover{
+    border-color: hsl(243, 100%, 62%);
+}
+
+.botaoSelecionado{
+    background-color: #F8F9FD;
+    border-color: hsl(243, 100%, 62%);
+}
+
+.option h3{
+    margin: 0;
+    color:#0E2F5B;
+    font-size: 1.2rem;
 }
 
 .botoes{
     display: flex;
     justify-content: space-between;
     
+}
+
+.botao{
+    font-size: 0.8rem;
+    color:#fff;
+    height: 40px;
+    width: 100px;
+    border-style: none;
+    border-radius: 8px;
+    cursor: url('/assets/images/cursor.png'), auto !important;/*  colocar  */
+}
+
+.larissar{
+    display: flex;
+    justify-content: space-around;
+    background-color: #d4d4d4;
+    padding-inline: 8px;
+    border-radius: 4px;
+}
+
+.estruturaOnOff{
+    display: flex;
+    transition: 3s;
+    align-items: center;
+    width: 50px;
+    border-radius: 15px;
+    background-color: #0E2F5B;
+    border:#0E2F5B solid 3px;
+}
+
+.mounthYear{
+    justify-content: "flex-start";
+}
+
+.interruptor{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #ffffff;
 }
 
 #next{
@@ -140,13 +202,23 @@ input::placeholder{
     display: none;
 }
 
-.botao{
-    font-size: 0.8rem;
-    color:#fff;
-    height: 40px;
-    width: 100px;
-    border-style: none;
-    border-radius: 8px;
-    cursor: url('/assets/images/cursor.png'), auto !important;
+
+
+coisa{
+
+    color: 
+    hsl(213, 96%, 18%)
+    hsl(243, 100%, 62%)
+    hsl(228, 100%, 84%)
+    hsl(206, 94%, 87%)
+    hsl(354, 84%, 57%)
 }
 
+neutro{
+    color:
+    hsl(231, 11%, 63%)
+    hsl(229, 24%, 87%)
+    hsl(217, 100%, 97%)
+    hsl(231, 100%, 99%)
+    hsl(0, 0%, 100%)
+}

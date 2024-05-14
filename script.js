@@ -15,9 +15,52 @@ const summaryBall = document.getElementById('summaryBall');
 const next = document.getElementById("next")
 const back = document.getElementById("back")
 
+const arcade = document.getElementById("arcade")
+const advanced = document.getElementById("advanced")
+const pro = document.getElementById("pro")
+
+const botaoOption = document.getElementsByClassName("option")
+
+const interruptor = document.getElementById("interruptor")
+
 var numero = 1;
 var indice = 1;
 
+var estado = true
+
+    interruptor.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (estado){
+            interruptor.classList.add('mounthYear')
+            
+        }
+        else{
+            
+        }
+    })
+
+    arcade.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        buttonSelect(arcade)
+    })
+
+    advanced.addEventListener('click', (e) => {
+        e.preventDefault();
+        buttonSelect(advanced)
+    })
+
+    pro.addEventListener('click', (e) => {
+        e.preventDefault();
+        buttonSelect(pro)
+    })
+
+    function buttonSelect(botao) {
+        arcade.classList.remove("botaoSelecionado")
+        advanced.classList.remove("botaoSelecionado")
+        pro.classList.remove("botaoSelecionado")
+        botao.classList.add("botaoSelecionado")
+    }
 
 
 
