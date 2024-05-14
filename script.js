@@ -21,78 +21,67 @@ var indice = 1;
 
 
 
-    next.addEventListener('click', (e) => {
-        
-        info.classList.add("hide");
-        plans.classList.add("hide");
-        add.classList.add("hide");
-        summary.classList.add('hide');
-        
-        e.preventDefault();
-        
-        console.log(numero)
-        numero ++
+next.addEventListener('click', (e) => {
+    reset()
+    e.preventDefault();
+    numero++
+    navegacao()
+})
 
-        if (numero == 1){
-            info.classList.remove("hide");
-        }
-        else if (numero == 2){
-            plans.classList.remove("hide");
-        }   
-        else if (numero == 3){
-            add.classList.remove("hide");
-        }
-        else if (numero == 4){
-            summary.classList.remove("hide");
-            next.classList.add('hide');
-        }
-        else{
-            next.classList.remove('hide')
-        }
-    } )
+back.addEventListener('click', (e) => {
+    reset()
+    e.preventDefault();
+    numero--
+    navegacao()
+})
 
-    back.addEventListener('click', (e) => {
-        
-        info.classList.add("hide");
-        plans.classList.add("hide");
-        add.classList.add("hide");
-        summary.classList.add('hide');
-        
-        e.preventDefault();
-        
-        console.log(numero)
-        numero --
+function reset() {
+    info.classList.add("hide");
+    infoBall.classList.remove("able");
 
-        if (numero == 1){
-            info.classList.remove("hide");
-            back.classList.add("hide")
-        }
-        else if (numero == 2){
-            plans.classList.remove("hide");
-        }   
-        else if (numero == 3){
-            add.classList.remove("hide");
-            next.classList.remove("hide")
-        }
-        else if (numero == 4){
-            summary.classList.remove("hide");
-        }
-        else{
-            next.classList.remove('hide')
-        }
+    plans.classList.add("hide");
+    plansBall.classList.remove("able");
 
-    } )
+    add.classList.add("hide");
+    addBall.classList.remove("able");
+
+    summary.classList.add('hide');
+    summaryBall.classList.remove('able');
+}
+
+function navegacao() {
+    if (numero == 1) {
+        info.classList.remove("hide");
+        infoBall.classList.add("able")
+        back.classList.add("hide");
+    }
+    else if (numero == 2) {
+        plans.classList.remove("hide");
+        back.classList.remove("hide")
+        plansBall.classList.add("able")
+    }
+    else if (numero == 3) {
+        add.classList.remove("hide");
+        next.classList.remove("hide")
+        addBall.classList.add("able")
+    }
+    else if (numero == 4) {
+        summary.classList.remove("hide");
+        summaryBall.classList.add("able")
+        next.classList.add("hide")
+    }
+    else {
+        next.classList.remove('hide')
+    }
+}
 
 
 bolas.forEach((bola) => {
-
-    
     bola.value = indice;
-    indice ++;
-
+    indice++;
     bola.textContent = bola.value;
-
-
+})
+/*
     
 
     bola.addEventListener('click', function() {
@@ -117,5 +106,5 @@ bolas.forEach((bola) => {
             summary.classList.remove('hide');
         }
     })
-})
+}) */
 

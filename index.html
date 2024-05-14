@@ -72,7 +72,7 @@
         </div>
       </div>
 
-      <div class="col-8 p-4 forms">
+      <div class="col-8 p-4">
         <form>
           <div id="info" class="">
             <div class="row">
@@ -80,15 +80,15 @@
               <p>Please provide your name, and phone number.</p>
             </div>
 
-            <div class="row">
+            <div class="row mb-3">
               <label>Name</label>
               <input type="text" placeholder="e.g. Stephen King" >required
             </div>
-            <div class="row">
+            <div class="row mb-3">
               <label>Email Address</label>
               <input type="email" placeholder="e.g. stephenking@gmail.com" >required
             </div>
-            <div class="row">
+            <div class="row mb-3">
               <label>Phone Number</label>
               <input type="tel" id="phone" name="phone"  placeholder="e.g. +1 (23) 4 5678-9000" pattern="\'+'\d{1,2} \(\d{1,2}\) \d{5} \d{4}" title="Não é um número telefonico" >required
             </div>
@@ -99,9 +99,25 @@
             <div class="row">
               <h2>Select Info</h2>
               <p>Please provide your name, and phone number.</p>
+              <div class="row">
+                <div class="col option">
+                  <img src="" alt="">
+                  arcade
+                  <span>$0,00/mo</span>
+                </div>
+                <div class="col option">
+                  <img src="" alt="">
+                  advanced
+                  $<span>10,00</span>/mo
+                </div>
+                <div class="col option">
+                  <img src="" alt="">
+                  pro
+                  <span>$100,00/mo</span>
+                </div>
             </div>
-
-
+              
+            </div>
           </div>
           <div id="add" class="hide">
             <div class="row">
@@ -126,6 +142,7 @@
             <button type="button" class="botao hide" id="back">
               Go Back
             </button>
+            <div style="color:transparent">.</div>
             <button type="submit" class="botao" id="next">
               Next Step
             </button>

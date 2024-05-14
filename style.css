@@ -55,7 +55,6 @@
     border-color: #BDE1FF;
     color:#BDE1FF;
     background-color: transparent;
-    cursor: pointer;
 }
 
 .able{
@@ -84,6 +83,7 @@
 
 form{
     height: 100%;
+    width: 500px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -114,6 +114,12 @@ input{
 }
 input::placeholder{
     color: hsl(240, 3%, 60%)
+}
+
+.option{
+    border:solid;
+    border-radius: 8px;
+    border-color: hsl(354, 84%, 57%);
 }
 
 .botoes{
