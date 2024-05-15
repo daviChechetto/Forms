@@ -89,20 +89,25 @@ form{
     flex-direction: column;
 }
 
-
+.input{
+    display: grid;
+}
 
 h2{
     font-weight: bold !important;
     color: hsl(213, 96%, 18%);
+    padding: 0 !important;
 }
 
 p{
     color: hsl(240, 3%, 60%);
+    padding: 0 !important;
 }
 
 label{
     color: hsl(213, 96%, 18%);
     padding: 0;
+    padding-left: 10px;
 }
 input{
     height: 40px;
@@ -110,24 +115,36 @@ input{
     border-width: 1px;
     border-color: hsl(229, 24%, 87%);
     border-style:solid;
+    padding-left: 10px;
     
 }
 input::placeholder{
-    color: hsl(240, 3%, 60%)
+    color: hsl(240, 3%, 60%);
+}
+
+.options{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .option{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     width: 142px !important;
-    height: 200px;
-    margin-inline: 8px;
+    height: 180px;
     padding: 15px;
     border:solid 1px;
     border-radius: 8px;
     background-color: #fff;
     border-color: hsl(206, 94%, 87%)
+}
+
+.option-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 button.option:hover{
@@ -161,34 +178,65 @@ button.option:hover{
     cursor: url('/assets/images/cursor.png'), auto !important;/*  colocar  */
 }
 
-.larissar{
+.aba-seletor{
     display: flex;
-    justify-content: space-around;
-    background-color: #d4d4d4;
+    justify-content: center;
+    background-color: hsl(217, 100%, 97%);
     padding-inline: 8px;
+    margin-inline: 16px;
+    height: auto;
+    padding: 4px;
     border-radius: 4px;
 }
 
-.estruturaOnOff{
-    display: flex;
-    transition: 3s;
-    align-items: center;
-    width: 50px;
-    border-radius: 15px;
-    background-color: #0E2F5B;
+.seletor{
+    height: 0;
+    margin-inline: 30px;
+}
+
+.seletor label{
+    display: inline-block;
+    position: relative;
+    width: 3rem;
+    height: 1.6rem;
     border:#0E2F5B solid 3px;
+    background-color: #0E2F5B;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
-.mounthYear{
-    justify-content: "flex-start";
-}
-
-.interruptor{
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
+.seletor label::after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
     background-color: #ffffff;
+    top: 2px;
+    left: 3%;
+    transition: 300ms cubic-bezier(.51,-0.43,.3,1.21);
 }
+
+.seletor input:checked + label::after{
+    left:60%
+}
+
+.seletor input{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+ 
+.span-selected{
+    transition: 300ms;
+    font-weight: bold;
+    color:#0E2F5B
+}
+
+
+
 
 #next{
     background-color: hsl(213, 96%, 18%);

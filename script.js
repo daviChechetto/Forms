@@ -21,21 +21,28 @@ const pro = document.getElementById("pro")
 
 const botaoOption = document.getElementsByClassName("option")
 
-const interruptor = document.getElementById("interruptor")
 
 var numero = 1;
 var indice = 1;
 
-var estado = true
+const seletor = document.getElementById("assinatura")
+const Mounthly = document.querySelector("#Mounthly")
+const Yearly = document.querySelector("#Yearly")
 
-    interruptor.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (estado){
-            interruptor.classList.add('mounthYear')
-            
+    seletor.addEventListener('change', () => {
+        if (seletor .checked){
+            Yearly.classList.add('span-selected')
+            Mounthly.classList.remove('span-selected')
+            arcade.querySelector('span').textContent = "$90/yr"
+            advanced.querySelector('span').textContent = "$120/yr"
+            pro.querySelector('span').textContent = "$150/yr"
         }
         else{
-            
+            Yearly.classList.remove('span-selected')
+            Mounthly.classList.add('span-selected')
+            arcade.querySelector('span').textContent = "$9/mo"
+            advanced.querySelector('span').textContent = "$12/mo"
+            pro.querySelector('span').textContent = "$15/mo"
         }
     })
 
