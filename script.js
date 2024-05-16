@@ -21,6 +21,8 @@ const pro = document.getElementById("pro")
 
 const botaoOption = document.getElementsByClassName("option")
 
+const desconto = document.querySelector('.desconto')
+
 
 var numero = 1;
 var indice = 1;
@@ -29,20 +31,54 @@ const seletor = document.getElementById("assinatura")
 const Mounthly = document.querySelector("#Mounthly")
 const Yearly = document.querySelector("#Yearly")
 
-    seletor.addEventListener('change', () => {
-        if (seletor .checked){
-            Yearly.classList.add('span-selected')
-            Mounthly.classList.remove('span-selected')
-            arcade.querySelector('span').textContent = "$90/yr"
-            advanced.querySelector('span').textContent = "$120/yr"
-            pro.querySelector('span').textContent = "$150/yr"
+
+function ano(){
+    Yearly.classList.add('span-selected')
+    Mounthly.classList.remove('span-selected')
+    arcade.querySelector('.preco').textContent = "$90/yr"
+    advanced.querySelector('.preco').textContent = "$120/yr"
+    pro.querySelector('.preco').textContent = "$150/yr"
+
+    const desconto = document.querySelectorAll('.desconto')
+    desconto.forEach((element) =>{    
+        element.style.visibility = "visible"
+        element.style.height = "20px"
+        element.style.opacity = "1"
+    })
+
+    const option = document.querySelectorAll(".option")        
+    option.forEach((element) =>{    
+        element.style.height = "180px"
+    })
+}
+
+function mes(){
+    Yearly.classList.remove('span-selected')
+    Mounthly.classList.add('span-selected')
+
+    arcade.querySelector('.preco').textContent = "$9/mo"
+    advanced.querySelector('.preco').textContent = "$12/mo"
+    pro.querySelector('.preco').textContent = "$15/mo"
+
+    const desconto = document.querySelectorAll('.desconto')
+    desconto.forEach((element) =>{    
+        element.style.visibility = "hidden"
+        element.style.height = "0px"
+        element.style.opacity = "0"
+    })
+
+    const option = document.querySelectorAll(".option")
+    option.forEach((element) =>{     
+        element.style.height = "150px"
+    })
+}
+
+seletor.addEventListener('change', () => {
+        if (seletor.checked){
+            ano()
         }
         else{
-            Yearly.classList.remove('span-selected')
-            Mounthly.classList.add('span-selected')
-            arcade.querySelector('span').textContent = "$9/mo"
-            advanced.querySelector('span').textContent = "$12/mo"
-            pro.querySelector('span').textContent = "$15/mo"
+            mes()
         }
     })
 

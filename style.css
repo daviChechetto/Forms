@@ -133,12 +133,13 @@ input::placeholder{
     flex-direction: column;
     justify-content: space-between;
     width: 142px !important;
-    height: 180px;
+    height: 150px;
     padding: 15px;
     border:solid 1px;
     border-radius: 8px;
     background-color: #fff;
-    border-color: hsl(206, 94%, 87%)
+    border-color: hsl(206, 94%, 87%);
+    transition: 300ms;
 }
 
 .option-info{
@@ -161,6 +162,17 @@ button.option:hover{
     color:#0E2F5B;
     font-size: 1.2rem;
 }
+
+.desconto{
+    visibility: hidden;
+    font-size: 0.9rem;
+    color: hsl(243, 100%, 62%);
+    height: 0;
+    opacity: 0;
+    transition: height 300ms, opacity 300ms;
+}
+
+
 
 .botoes{
     display: flex;
@@ -230,12 +242,15 @@ button.option:hover{
 }
  
 .span-selected{
-    transition: 300ms;
     font-weight: bold;
     color:#0E2F5B
 }
 
-
+.checkbox{
+    border: #0E2F5B solid 1px;
+    border-radius: 8px;
+    padding: 20px;
+}
 
 
 #next{
