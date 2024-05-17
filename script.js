@@ -41,9 +41,8 @@ function ano(){
 
     const desconto = document.querySelectorAll('.desconto')
     desconto.forEach((element) =>{    
-        element.style.visibility = "visible"
-        element.style.height = "20px"
-        element.style.opacity = "1"
+        element.classList.add('mostrar')
+        element.classList.remove('desmostrar')
     })
 
     const option = document.querySelectorAll(".option")        
@@ -62,9 +61,8 @@ function mes(){
 
     const desconto = document.querySelectorAll('.desconto')
     desconto.forEach((element) =>{    
-        element.style.visibility = "hidden"
-        element.style.height = "0px"
-        element.style.opacity = "0"
+        element.classList.remove('mostrar')
+        element.classList.add('desmostrar')
     })
 
     const option = document.querySelectorAll(".option")

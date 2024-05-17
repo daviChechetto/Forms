@@ -82,16 +82,16 @@
 
             <div class="input mb-3">
               <label>Name</label>
-              <input type="text" placeholder="e.g. Stephen King"required>
+              <input type="text" placeholder="e.g. Stephen King" required>
             </div>
             <div class="input mb-3">
               <label>Email Address</label>
-              <input type="email" placeholder="e.g. stephenking@gmail.com"required>
+              <input type="email" placeholder="e.g. stephenking@gmail.com" required>
             </div>
             <div class="input mb-3">
               <label>Phone Number</label>
               <input type="tel" id="phone" name="phone" placeholder="e.g. +1 (23) 4 5678-9000"
-                pattern="\'+'\d{1,2} \(\d{1,2}\) \d{5} \d{4}" title="Não é um número telefonico"required>
+                pattern="\'+'\d{1,2} \(\d{1,2}\) \d{5} \d{4}" title="Não é um número telefonico" required>
             </div>
 
           </div>
@@ -162,27 +162,35 @@
               <p>Please provide your name, and phone number.</p>
             </div>
 
-            <div>
-              <div class="checkbox">
-                <input type="checkbox">
-                <div>
-                  <label for="">Online server</label>
-                  <div>Access to multplayer games</div>
-                </div>
+            <div class="containerAdd">
+              <div class="optionCheckbox">
+                <label for="server" class="checkbox">
+                  <input id="server" type="checkbox">
+                  <div>
+                    <h3>Online server</h3>
+                    <p>Access to multplayer games</p>
+                  </div>
+                </label>
               </div>
-              <div>
-                <input type="checkbox">
-                <div>
-                  <label for="">Larger storage</label>
-                  <div>Extra 1TB of cloud save</div>
-                </div>
+
+              <div class="optionCheckbox">
+                <label for="storage" class="checkbox">
+                  <input type="checkbox" id="storage">
+                  <div>
+                    <h3>Larger storage</h3>
+                    <p>Extra 1TB of cloud save</p>
+                  </div>
+                </label>
               </div>
-              <div>
-                <input type="checkbox">
-                <div>
-                  <label for="">Customizable profile</label>
-                  <div>Custom theme on your profile</div>
-                </div>
+              
+              <div class="optionCheckbox">
+                <label for="custom" class="checkbox">
+                  <input type="checkbox" id="custom">
+                  <div>
+                    <h3>Customizable profile</h3>
+                    <p>Custom theme on your profile</p>
+                  </div>
+                </label>
               </div>
             </div>
 
