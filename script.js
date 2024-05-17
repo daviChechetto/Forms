@@ -1,3 +1,6 @@
+
+
+
 const bolas = document.querySelectorAll(".step-ball")
 
 const info = document.querySelector("#info")

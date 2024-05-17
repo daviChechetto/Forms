@@ -1,15 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+/* Parametro universal */
+
 *{
     font-family: "Ubuntu", sans-serif !important;
     margin:0;
     padding:0;
 }
 
-.df{
-    align-items: center;
-}
+
+
 
 .containe{
     background-color: #EEF5FF;
@@ -20,6 +21,7 @@
 }
 
 
+/* aba geral */
 .aba{
     width: auto;
     border-radius: 15px;
@@ -34,7 +36,9 @@
     position: relative;
 }
 
-.barraNavega{
+/* progresso */
+
+.barra-progresso{
     display: flex;
     height: 250px;
     flex-direction: column;
@@ -43,6 +47,12 @@
     position: absolute;
     top: 50px; /* Posição relativa ao elemento pai */
     left: 50px; /* Posição relativa ao elemento pai */
+}
+
+.indices-progressos{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .step-ball{
@@ -57,16 +67,13 @@
     background-color: transparent;
 }
 
+/* habilita a bola correspondente a aba ativa*/
 .able{
     border: none;
     color: #0E2F5B;
     background-color: #BDE1FF;
-    cursor: default;
 }
 
-.hide{
-    display: none;
-}
 
 .step-text{
     width: auto !important;
@@ -77,9 +84,12 @@
     font-weight: 100;
     font-size: 0.8rem;
 }
-.page{
+.step-name{
     font-weight: bold;
 }
+
+
+/* Todas as abas do formulario */
 
 form{
     height: 100%;
@@ -118,10 +128,18 @@ input{
     padding-left: 10px;
     
 }
+
+/* Aba INFO */
+
 input::placeholder{
     color: hsl(240, 3%, 60%);
 }
 
+
+/* Aba PLANS */
+
+
+/* opções */
 .options{
     display: flex;
     justify-content: space-evenly;
@@ -165,7 +183,6 @@ button.option:hover{
 
 .desconto{
     visibility: hidden;
-    
     font-size: 0.9rem;
     color: hsl(243, 100%, 62%);
     height: 0;
@@ -175,21 +192,6 @@ button.option:hover{
 
 
 
-.botoes{
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-.botao{
-    font-size: 0.8rem;
-    color:#fff;
-    height: 40px;
-    width: 100px;
-    border-style: none;
-    border-radius: 8px;
-    cursor: url('/assets/images/cursor.png'), auto !important;/*  colocar  */
-}
 
 .aba-seletor{
     display: flex;
@@ -233,7 +235,7 @@ button.option:hover{
 
 .seletor input:checked + label::after{
     left:60%;
-    
+
 }
 
 .seletor input{
@@ -257,25 +259,36 @@ button.option:hover{
     padding: 10px;
 }
 
-.optionCheckbox label{
+.option-checkbox label{
     background-color: #ffffff;
+    height: 80px;
 }
-.optionCheckbox input:checked{
-    background-color: #0E2F5B;
+
+.option-checkbox .inputCheckbox{
+    display: none;
+}
+
+.option-checkbox input:checked + .checkbox{
+    background-color: hsl(217, 100%, 97%);
     border-color: hsl(243, 100%, 62%);
 }
 
+.option-checkbox input:checked + .icon-checkbox{
+    color: #F8F9FD;
+    background-color: hsl(243, 100%, 62%);
+}
 
+.icon-checkbox{
+    margin-inline: 20px;
+}
 
-
-.containerAdd{
+.container-add{
     display: flex;
     flex-direction: column;
     gap: 20px;
-
 }
 
-.optionCheckbox :hover{
+.option-checkbox :hover{
     border-color: hsl(243, 100%, 62%);
 }
 
@@ -298,6 +311,9 @@ button.option:hover{
     font-weight: bold;
 }   
 
+
+/* Botões de navegação IR e VOLTAR */
+
 #next{
     background-color: hsl(213, 96%, 18%);
 }
@@ -309,6 +325,26 @@ button.option:hover{
 .hide{
     display: none;
 }
+
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.botao{
+    font-size: 0.8rem;
+    color:#fff;
+    height: 40px;
+    width: 100px;
+    border-style: none;
+    border-radius: 8px;
+    cursor: url('/assets/images/cursor.png'), auto !important;/*  colocar  */
+}
+
+
+
+/* transição da informação de desconto */
 
 .mostrar{
     visibility: visible;
@@ -344,7 +380,7 @@ button.option:hover{
     }
 } */
 
-
+/* Cores bases */
 
 coisa{
 

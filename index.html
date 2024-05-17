@@ -39,33 +39,33 @@
             </g>
           </svg>
 
-          <div class="barraNavega">
-            <div class="row df">
+          <div class="barra-progresso">
+            <div class="indices-progressos">
               <div id="infoBall" class="step-ball able"></div>
               <div class="step-text">
                 <div class="step">STEP 1</div>
-                <div class="page">YOUR INFO</div>
+                <div class="step-name">YOUR INFO</div>
               </div>
             </div>
-            <div class="row df">
+            <div class="indices-progressos">
               <div id="plansBall" class="step-ball"></div>
               <div class="step-text">
                 <div class="step">STEP 2</div>
-                <div class="page">SELECT PLANS</div>
+                <div class="step-name">SELECT PLANS</div>
               </div>
             </div>
-            <div class="row df">
+            <div class="indices-progressos">
               <div id="addBall" class="step-ball"></div>
               <div class="step-text">
                 <div class="step">STEP 3</div>
-                <div class="page">ADD-ONS</div>
+                <div class="step-name">ADD-ONS</div>
               </div>
             </div>
-            <div class="row df">
+            <div class="indices-progressos">
               <div id="summaryBall" class="step-ball"></div>
               <div class="step-text">
                 <div class="step">STEP 4</div>
-                <div class="page">SUMMARY</div>
+                <div class="step-name">SUMMARY</div>
               </div>
             </div>
           </div>
@@ -74,6 +74,7 @@
 
       <div class="col-8 p-4">
         <form>
+
           <div id="info" class="hide">
             <div class="">
               <h2>Personal Info</h2>
@@ -95,7 +96,6 @@
             </div>
 
           </div>
-
           <div id="plans" class="hide">
             <div class="">
               <h2>Select Info</h2>
@@ -162,10 +162,12 @@
               <p>Please provide your name, and phone number.</p>
             </div>
 
-            <div class="containerAdd">
-              <div class="optionCheckbox">
+            <div class="container-add">
+
+              <div class="option-checkbox">
+                <input class="inputCheckbox" id="server" type="checkbox">
                 <label for="server" class="checkbox">
-                  <input id="server" type="checkbox">
+                  <ion-icon name="checkbox-outline" class="icon-checkbox"></ion-icon>
                   <div>
                     <h3>Online server</h3>
                     <p>Access to multplayer games</p>
@@ -173,9 +175,10 @@
                 </label>
               </div>
 
-              <div class="optionCheckbox">
+              <div class="option-checkbox">
+                <input class="inputCheckbox" type="checkbox" id="storage">
                 <label for="storage" class="checkbox">
-                  <input type="checkbox" id="storage">
+                  <ion-icon name="checkbox-outline" class="icon-checkbox"></ion-icon>
                   <div>
                     <h3>Larger storage</h3>
                     <p>Extra 1TB of cloud save</p>
@@ -183,17 +186,18 @@
                 </label>
               </div>
               
-              <div class="optionCheckbox">
-                <label for="custom" class="checkbox">
-                  <input type="checkbox" id="custom">
+              <div class="option-checkbox">
+                <input class="inputCheckbox" type="checkbox" id="custom">
+                <label for="custom" for="customs" class="checkbox">
+                  <ion-icon name="checkbox-outline" class="icon-checkbox"></ion-icon>
                   <div>
                     <h3>Customizable profile</h3>
                     <p>Custom theme on your profile</p>
                   </div>
                 </label>
               </div>
-            </div>
 
+            </div>
 
           </div>
           <div id="summary" class="hide">
@@ -204,8 +208,6 @@
 
 
           </div>
-
-
 
           <div class="botoes">
             <button type="button" class="botao hide" id="back">
@@ -224,6 +226,8 @@
   </div>
 
   <script src="script.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
 
 </body>
 
