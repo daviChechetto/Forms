@@ -1,6 +1,3 @@
-
-
-
 const bolas = document.querySelectorAll(".step-ball")
 
 const info = document.querySelector("#info")
@@ -139,26 +136,26 @@ function reset() {
 function navegacao() {
     if (numero == 1) {
         info.classList.remove("hide");
-        infoBall.classList.add("able")
-        back.classList.add("hide");
+        infoBall.classList.add("able");
+        back.classList.add("hidden");
     }
     else if (numero == 2) {
         plans.classList.remove("hide");
-        back.classList.remove("hide")
-        plansBall.classList.add("able")
+        back.classList.remove("hidden");
+        plansBall.classList.add("able");
     }
     else if (numero == 3) {
         add.classList.remove("hide");
-        next.classList.remove("hide")
-        addBall.classList.add("able")
+        next.classList.remove("hidden");
+        addBall.classList.add("able");
     }
     else if (numero == 4) {
         summary.classList.remove("hide");
-        summaryBall.classList.add("able")
-        next.classList.add("hide")
+        summaryBall.classList.add("able");
+        next.classList.add("hidden");
     }
     else {
-        next.classList.remove('hide')
+        next.classList.remove('hidden');
     }
 }
 

@@ -9,7 +9,9 @@
     padding:0;
 }
 
-
+.hidden{
+    visibility: hidden;
+}
 
 
 .containe{
@@ -253,10 +255,16 @@ button.option:hover{
 .checkbox{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border: hsl(229, 24%, 87%) solid 2px;
     border-radius: 8px;
     padding-inline: 20px;
     padding: 10px;
+}
+
+.checkbox-aling{
+    display: flex;
+    align-items: center;
 }
 
 .option-checkbox label{
@@ -264,7 +272,7 @@ button.option:hover{
     height: 80px;
 }
 
-.option-checkbox .inputCheckbox{
+.option-checkbox .input-checkbox{
     display: none;
 }
 
@@ -276,6 +284,14 @@ button.option:hover{
 .option-checkbox input:checked + .icon-checkbox{
     color: #F8F9FD;
     background-color: hsl(243, 100%, 62%);
+}
+
+.adicional{
+    visibility: hidden;
+}
+
+.option-checkbox input:checked ~ .adicional{
+    visibility: visible;
 }
 
 .icon-checkbox{
