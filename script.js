@@ -80,21 +80,21 @@ seletor.addEventListener('change', () => {
         }
     })
 
-    arcade.addEventListener('click', (e) => {
-        e.preventDefault();
+arcade.addEventListener('click', (e) => {
+    e.preventDefault();
 
-        buttonSelect(arcade)
-    })
+    buttonSelect(arcade)
+})
 
-    advanced.addEventListener('click', (e) => {
-        e.preventDefault();
-        buttonSelect(advanced)
-    })
+advanced.addEventListener('click', (e) => {
+    e.preventDefault();
+    buttonSelect(advanced)
+})
 
-    pro.addEventListener('click', (e) => {
-        e.preventDefault();
-        buttonSelect(pro)
-    })
+pro.addEventListener('click', (e) => {
+    e.preventDefault();
+    buttonSelect(pro)
+})
 
     function buttonSelect(botao) {
         arcade.classList.remove("botaoSelecionado")
@@ -165,30 +165,3 @@ bolas.forEach((bola) => {
     indice++;
     bola.textContent = bola.value;
 })
-/*
-    
-
-    bola.addEventListener('click', function() {
-
-        info.classList.add("hide");
-        plans.classList.add("hide");
-        add.classList.add("hide");
-        summary.classList.add('hide');
-
-        bolas.forEach((bola) => {bola.classList.remove('able')});
-        this.classList.add('able');
-        if (bola.value == 1){
-            info.classList.remove("hide");
-        }
-        else if (bola.value == 2){
-            plans.classList.remove("hide");
-        }   
-        else if (bola.value == 3){
-            add.classList.remove("hide");
-        }
-        else if (bola.value == 4){
-            summary.classList.remove('hide');
-        }
-    })
-}) */
-

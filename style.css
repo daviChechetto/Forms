@@ -256,7 +256,7 @@ button.option:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: hsl(229, 24%, 87%) solid 2px;
+    border: hsl(229, 24%, 87%) solid 1px;
     border-radius: 8px;
     padding-inline: 20px;
     padding: 10px;
@@ -313,8 +313,14 @@ button.option:hover{
     margin-inline-end: 20px;
 }
 
+.icon-checkbox{
+    background-color: hsl(0, 0%, 100%);
+    border: hsl(229, 24%, 87%) solid 1px ;
+}
+
 .checkbox p{
     margin: 0;
+    font-size: 0.9rem;
 }
 
 .checkbox label{
@@ -323,7 +329,7 @@ button.option:hover{
 
 .checkbox h3{
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }   
 
