@@ -169,13 +169,17 @@
                 <input class="input-checkbox" id="server" type="checkbox">
                 <label for="server" class="checkbox">
                   <div class="checkbox-aling">
-                    <ion-icon name="checkbox-outline" class="icon-checkbox"></ion-icon>
+                    <div class="icon-checkbox">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
+                        <path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1" />
+                      </svg>
+                    </div>
                     <div>
                       <h3>Online server</h3>
                       <p>Access to multplayer games</p>
                     </div>
                   </div>
-                  <div>+$2/mo</div>
+                  <div class="adicional" id="online">+$1/mo</div>
                 </label>
               </div>
 
@@ -183,13 +187,17 @@
                 <input class="input-checkbox" type="checkbox" id="storage">
                 <label for="storage" class="checkbox">
                   <div class="checkbox-aling">
-                    <ion-icon name="checkbox-outline" class="icon-checkbox"></ion-icon>
+                    <div class="icon-checkbox">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
+                        <path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1" />
+                      </svg>
+                    </div>
                     <div>
                       <h3>Larger storage</h3>
                       <p>Extra 1TB of cloud save</p>
                     </div>
                   </div>
-                  <div>+$2/mo</div>
+                  <div class="adicional" id="large">+$2/mo</div>
                 </label>
               </div>
 
@@ -207,7 +215,7 @@
                       <p>Custom theme on your profile</p>
                     </div>
                   </div>
-                  <div class="adicional">+$2/mo</div>
+                  <div class="adicional" id="customAdd">+$2/mo</div>
                 </label>
               </div>
 
@@ -239,6 +247,7 @@
 
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>

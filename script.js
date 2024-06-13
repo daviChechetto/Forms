@@ -19,6 +19,8 @@ const arcade = document.getElementById("arcade")
 const advanced = document.getElementById("advanced")
 const pro = document.getElementById("pro")
 
+const online = $('#online')
+
 const botaoOption = document.getElementsByClassName("option")
 
 const desconto = document.querySelector('.desconto')
@@ -35,7 +37,13 @@ const Yearly = document.querySelector("#Yearly")
 function ano(){
     Yearly.classList.add('span-selected')
     Mounthly.classList.remove('span-selected')
+
     arcade.querySelector('.preco').textContent = "$90/yr"
+    advanced.querySelector('.preco').textContent = "$120/yr"
+    pro.querySelector('.preco').textContent = "$150/yr"
+
+    
+    online.text('+$10/mo')
     advanced.querySelector('.preco').textContent = "$120/yr"
     pro.querySelector('.preco').textContent = "$150/yr"
 

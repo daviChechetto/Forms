@@ -272,6 +272,10 @@ button.option:hover{
     height: 80px;
 }
 
+.option-checkbox{
+    user-select: none;
+}
+
 .option-checkbox .input-checkbox{
     display: none;
 }
@@ -281,16 +285,21 @@ button.option:hover{
     border-color: hsl(243, 100%, 62%);
 }
 
-.option-checkbox input:checked + .icon-checkbox{
-    color: #F8F9FD;
+.option-checkbox input:checked + label .icon-checkbox{
+    color: #a1b1f1;
     background-color: hsl(243, 100%, 62%);
 }
 
 .adicional{
     visibility: hidden;
+    color: hsl(243, 100%, 62%);
 }
 
-.option-checkbox input:checked ~ .adicional{
+.option-checkbox input:checked + label .adicional{
+    visibility: visible;
+}
+
+.option-checkbox :hover .adicional{
     visibility: visible;
 }
 
@@ -304,7 +313,7 @@ button.option:hover{
     gap: 20px;
 }
 
-.option-checkbox :hover{
+.option-checkbox:hover label{
     border-color: hsl(243, 100%, 62%);
 }
 
@@ -316,6 +325,13 @@ button.option:hover{
 .icon-checkbox{
     background-color: hsl(0, 0%, 100%);
     border: hsl(229, 24%, 87%) solid 1px ;
+    border-radius: 4px;
+    height: 18px;
+}
+
+.icon-checkbox svg{
+    margin: 2px;
+    margin-top: -10px;
 }
 
 .checkbox p{
